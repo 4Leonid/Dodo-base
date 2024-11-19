@@ -25,8 +25,8 @@ class ImageView: UIImageView {
     case .product:
       image = UIImage(named: "bestoganov")
       contentMode = .scaleAspectFit
-      heightAnchor.constraint(equalToConstant: 100).isActive = true
-      widthAnchor.constraint(equalToConstant: 100).isActive = true
+      heightAnchor.constraint(equalToConstant: 130).isActive = true
+      widthAnchor.constraint(equalToConstant: 130).isActive = true
     case .detail:
       image = UIImage(named: "bestroganov")
       contentMode = .scaleAspectFit
@@ -35,8 +35,8 @@ class ImageView: UIImageView {
     case .bunner:
       image = UIImage(named: "bestroganov")
       contentMode = .scaleAspectFit
-      heightAnchor.constraint(equalToConstant: 60).isActive = true
-      widthAnchor.constraint(equalToConstant: 300).isActive = true
+      heightAnchor.constraint(equalToConstant: 100).isActive = true
+      widthAnchor.constraint(equalToConstant: 100).isActive = true
     }
   }
   

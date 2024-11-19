@@ -9,11 +9,12 @@ import UIKit
 
 enum LabelType {
   case name
-  case description
+  case detail
   case price
+  case bunner
 }
 
-class Label: UILabel {
+class Label: InsetLabel {
   
   init(type: LabelType, text: String = "") {
     super.init(frame: .zero)
@@ -25,14 +26,22 @@ class Label: UILabel {
     switch type {
     case .name:
       self.text = text
-      font = .boldSystemFont(ofSize: 20)
-    case .description:
+      font = .boldSystemFont(ofSize: 14)
+    case .detail:
       self.text = text
-      font = .systemFont(ofSize: 20)
+      font = .systemFont(ofSize: 12)
+      numberOfLines = 0
+      textColor = .lightGray
     case .price:
       self.text = text
-      font = .boldSystemFont(ofSize:15)
-      backgroundColor = .lightGray
+      font = .boldSystemFont(ofSize: 15)
+      backgroundColor = .lightGray.withAlphaComponent(0.5)
+      layer.cornerRadius = 16
+      clipsToBounds = true
+      contentInset = UIEdgeInsets(top: 6, left: 8, bottom: 6, right: 8)
+    case .bunner:
+      self.text = text
+      font = .boldSystemFont(ofSize: 22)
     }
   }
   

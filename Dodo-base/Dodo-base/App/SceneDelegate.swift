@@ -7,6 +7,8 @@
 
 import UIKit
 
+let dependencyContainer = DependencyContainer()
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
   var window: UIWindow?
@@ -18,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   ) {
     guard let scene = (scene as? UIWindowScene) else { return }
     window = UIWindow(windowScene: scene)
-    window?.rootViewController = MenuConfigurator().configure()
+    window?.rootViewController = dependencyContainer.screenFactory.makeMenuScreen()
     window?.makeKeyAndVisible()
   }
 

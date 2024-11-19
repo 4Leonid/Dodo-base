@@ -8,8 +8,10 @@
 import UIKit
 
 struct Product: Decodable {
+  let id: Int
   let name: String
-  let description: String
+  let detail: String
   let image: String
   let price: UInt
+  let type: String
 }

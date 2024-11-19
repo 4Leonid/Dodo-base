@@ -22,11 +22,13 @@ class StackView: UIStackView {
     switch type {
     case .productCell:
       axis = .vertical
-      distribution = .fillProportionally
+      distribution = .fill
+      alignment = .leading
+      spacing = Layout.offset6
       
       directionalLayoutMargins = NSDirectionalEdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0)
       isLayoutMarginsRelativeArrangement = true
-      backgroundColor = .yellow
+      backgroundColor = .systemBackground
     }
   }
   
